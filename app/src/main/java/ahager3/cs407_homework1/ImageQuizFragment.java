@@ -65,10 +65,6 @@ public class ImageQuizFragment extends Fragment {
 
         // instantiate widgets here
         question = (EditText) view.findViewById(R.id.editText);
-        headerTextView = (TextView) view.findViewById(R.id.header);
-        headerTextView.setText("Put Question Here");
-
-
 
         return view;
     }
