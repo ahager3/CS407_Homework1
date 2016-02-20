@@ -60,9 +60,9 @@ public class QuizFragment extends Fragment{
         question = (TextView) view.findViewById(R.id.textView);
         question.setText("Question " + total_questions);
         headerTextView = (TextView) view.findViewById(R.id.header);
-        headerTextView.setText("Put Question Here");
-
-
+        headerTextView.setText("What is the square root of 100?");
+        answerOne.setText("10");
+        answerTwo.setText("100");
 
         return view;
     }
@@ -75,7 +75,7 @@ public class QuizFragment extends Fragment{
             public void onClick(View v) {
 
                 // If correct increment correct_responses
-
+                correct_responses += 1;
                 // create next QuizFragment or the results page
                 if (total_questions == QUESTIONS) {
                     displayResults(correct_responses, total_questions);

@@ -75,10 +75,17 @@ public class ImageQuizFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        if(question.getText().toString().equals("Yes")){
-            correct_responses += 1;
+        while(!question.getText().equals("")){
+            //Wait for input
         }
 
+        if(question.getText().toString().equals("Yes")){
+            System.out.println("\n\n\n" + question.getText().toString() + "\n\n");
+            correct_responses += 1;
+        }
+        else {
+            correct_responses = 2;
+        }
         // Go to a QuizFragment
         getFragmentManager()
                 .beginTransaction()
