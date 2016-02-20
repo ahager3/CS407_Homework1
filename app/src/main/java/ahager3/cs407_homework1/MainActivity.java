@@ -1,4 +1,4 @@
-package aaron.cs407_hw1;
+package ahager3.cs407_homework1;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
