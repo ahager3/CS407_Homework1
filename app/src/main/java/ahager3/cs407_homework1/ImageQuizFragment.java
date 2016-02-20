@@ -75,23 +75,24 @@ public class ImageQuizFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        while(!question.getText().equals("")){
-            //Wait for input
-        }
+        question.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        if(question.getText().toString().equals("Yes")){
-            System.out.println("\n\n\n" + question.getText().toString() + "\n\n");
-            correct_responses += 1;
-        }
-        else {
-            correct_responses = 2;
-        }
-        // Go to a QuizFragment
-        getFragmentManager()
-                .beginTransaction()
-                .replace(R.id.main_fragment_container, QuizFragment.newInstance(correct_responses, total_questions))
-                .addToBackStack(null)
-                .commit();
+                if (question.getText().toString().equals("Yes")) {
+                    correct_responses += 1;
+                } else {
+                    // Don't change the correct responses
+                }
+                // Go to a QuizFragment
+                getFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.main_fragment_container, QuizFragment.newInstance(correct_responses, total_questions))
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
 
 
     }

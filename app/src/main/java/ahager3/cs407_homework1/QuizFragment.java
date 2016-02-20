@@ -129,7 +129,7 @@ public class QuizFragment extends Fragment{
 
                         getFragmentManager()
                                 .beginTransaction()
-                                .replace(R.id.main_fragment_container, QuizFragment.newInstance(0, 0))
+                                .replace(R.id.main_fragment_container, ImageQuizFragment.newInstance(0, 0))
                                 .addToBackStack(null)
                                 .commit();
 
